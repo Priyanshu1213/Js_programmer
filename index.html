@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main_container" >
+<div class="container">
+    <h2>Chemical Supplies</h2>
+    <input type="search" id="search-input" placeholder="Search by chemical name" oninput="searchByName()">
+
+    <div class="toolbar">
+        <button id="add-btn" onclick="addRow()">➕</button>
+        <button onclick="moveUp()">⬆️</button>
+        <button onclick="moveDown()">⬇️</button>
+        <button onclick="deleteRow()">🗑️</button>
+        <button onclick="refreshData()">🔄</button>
+        <button id="edit-btn" onclick="editRow()">✏️</button>
+        <button id="save-btn" onclick="saveRow()" disabled>💾</button>
+    </div>
+</div>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">&#10004;</th>
+                <th onclick="sortTable(1)">Chemical Name</th>
+                <th onclick="sortTable(2)">Vendor</th>
+                <th onclick="sortTable(3)">Density</th>
+                <th onclick="sortTable(4)">Viscosity</th>
+                <th onclick="sortTable(5)">Packaging</th>
+                <th onclick="sortTable(6)">Pack Size</th>
+                <th onclick="sortTable(7)">Unit</th>
+                <th onclick="sortTable(8)">Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Rows will be dynamically generated -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
